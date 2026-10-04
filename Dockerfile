@@ -16,7 +16,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy bot files
 COPY moviezwap_telegram_bot.py .
-COPY lang.py . 2>/dev/null || true
 
 # Create necessary directories
 RUN mkdir -p downloads logs
