@@ -37,15 +37,15 @@ from tqdm import tqdm
 load_dotenv()
 
 # Bot config
-API_ID = int(os.getenv("API_ID", 0))
-API_HASH = os.getenv("API_HASH", "")
-BOT_TOKEN = os.getenv("BOT_TOKEN", "")
-OWNER_ID = int(os.getenv("OWNER_ID", 0))
+API_ID = int(os.getenv("API_ID", 20432885))
+API_HASH = os.getenv("API_HASH", "4fdcfab1c7f5e24ae69f3ce6bb234dec")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "8372384598:AAHzv7NS1j2bsZ3yOlxy65NkbiRIpu5Th0k")
+OWNER_ID = int(os.getenv("OWNER_ID", 8729304171))
 
 # Force subscribe channels (space-separated)
-FORCE_SUB_CHANNELS = os.getenv("FORCE_SUB_CHANNELS", "").split() or []
+FORCE_SUB_CHANNELS = os.getenv("FORCE_SUB_CHANNELS", "-1003873749415").split() or []
 # Log channel
-LOG_CHANNEL = int(os.getenv("LOG_CHANNEL", 0)) if os.getenv("LOG_CHANNEL") else None
+LOG_CHANNEL = int(os.getenv("LOG_CHANNEL", -1004396123873)) if os.getenv("LOG_CHANNEL") else None
 
 # Limits
 MAX_PARALLEL_DOWNLOADS = int(os.getenv("MAX_PARALLEL_DOWNLOADS", 5))
