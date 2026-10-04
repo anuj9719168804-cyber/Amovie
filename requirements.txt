@@ -1,5 +1,5 @@
 pyrogram==2.0.106
-kurigram==2.0.106
+kurigram==2.2.26
 tgcrypto==1.2.5
 requests==2.31.0
 beautifulsoup4==4.12.2
