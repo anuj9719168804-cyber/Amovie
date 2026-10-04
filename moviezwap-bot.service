@@ -1,0 +1,18 @@
+[Unit]
+Description=MoviezWap Telegram Bot
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/moviezwap-telegram-bot
+EnvironmentFile=/home/ubuntu/moviezwap-telegram-bot/.env
+ExecStart=/usr/bin/python3 /home/ubuntu/moviezwap-telegram-bot/moviezwap_telegram_bot.py
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=moviezwap-bot
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  moviezwap-bot:
+    build: .
+    container_name: moviezwap_telegram_bot
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - ./downloads:/app/downloads
+      - ./logs:/app/logs
+    environment:
+      - PYTHONUNBUFFERED=1
+    networks:
+      - moviezwap-network
+
+  # Optional: MongoDB for data persistence
+  # mongodb:
+  #   image: mongo:latest
+  #   container_name: moviezwap_db
+  #   restart: always
+  #   environment:
+  #     MONGO_INITDB_ROOT_USERNAME: root
+  #     MONGO_INITDB_ROOT_PASSWORD: password123
+  #   volumes:
+  #     - mongodb_data:/data/db
+  #   networks:
+  #     - moviezwap-network
+  #   ports:
+  #     - "27017:27017"
+
+networks:
+  moviezwap-network:
+    driver: bridge
+
+volumes:
+  mongodb_data:
